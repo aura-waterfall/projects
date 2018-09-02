@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--Suruchi Walekar
+    1231044-->
+<html>
+    <head>
+        <title>Recipes</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function Recipe(name, ingredients, price) {
+                this.name = name;
+                this.ingredients = ingredients;
+                this.price = price;
+            }
+            var pasta = new Recipe("Mushroom Ravioli", "Pasta. Cheese. Mushrooms. Spinach. Pasta Sauce.", "$10");
+            var burger = new Recipe("Veggie Burger", "Burger. Cheese. Tomatoes. Pickles.", "$7");
+            var soup = new Recipe("Tomato Soup", "Olive oil. Tomatoes. Carrots. Butter.", "$6");
+            function describe(recipe) {
+                document.write("<h3>" + recipe.name + "</h2>");
+                document.write("Ingredients: " + recipe.ingredients);
+                document.write("<br />");
+                document.write("<br />");
+                document.write("Estimated Price: " + recipe.price);
+            }
+            
+            describe(burger);
+            document.write("<br />");
+            document.write("<br />");
+            document.write("<br />");
+            describe(pasta);
+            document.write("<br />");
+            document.write("<br />");
+            document.write("<br />");
+            describe(soup);
+            document.write("<div id = 'browsertype'>");
+            document.write("Your browser type is: " + navigator.appVersion);
+            document.write("</div>");
+            document.getElementById("browsertype").style.position = "absolute";
+            document.getElementById("browsertype").style.bottom = "20px";
+        </script>
+    </body>
+</html>
