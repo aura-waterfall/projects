@@ -1,43 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!--Suruchi Walekar
-    1231044-->
 <html>
     <head>
-        <title>Recipes</title>
+        <title>Assignment 9b Useful Tips</title>
     </head>
-    <body>
-        <script type="text/javascript">
-            function Recipe(name, ingredients, price) {
-                this.name = name;
-                this.ingredients = ingredients;
-                this.price = price;
-            }
-            var pasta = new Recipe("Mushroom Ravioli", "Pasta. Cheese. Mushrooms. Spinach. Pasta Sauce.", "$10");
-            var burger = new Recipe("Veggie Burger", "Burger. Cheese. Tomatoes. Pickles.", "$7");
-            var soup = new Recipe("Tomato Soup", "Olive oil. Tomatoes. Carrots. Butter.", "$6");
-            function describe(recipe) {
-                document.write("<h3>" + recipe.name + "</h2>");
-                document.write("Ingredients: " + recipe.ingredients);
-                document.write("<br />");
-                document.write("<br />");
-                document.write("Estimated Price: " + recipe.price);
-            }
-            
-            describe(burger);
-            document.write("<br />");
-            document.write("<br />");
-            document.write("<br />");
-            describe(pasta);
-            document.write("<br />");
-            document.write("<br />");
-            document.write("<br />");
-            describe(soup);
-            document.write("<div id = 'browsertype'>");
-            document.write("Your browser type is: " + navigator.appVersion);
-            document.write("</div>");
-            document.getElementById("browsertype").style.position = "absolute";
-            document.getElementById("browsertype").style.bottom = "20px";
+    <body style="background-color: azure">
+        <div>
+            <img id = "mypic" style='position:relative;display: block;margin-left: auto;margin-right: auto;margin-top: 5%' src = 'Autumn.jpg' height='400px' width='600px' />
+        </div>
+        <p style="text-align: center" style='position:relative;color: darkgreen;margin-top: 5%'>~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~</p>
+        <h1 id="header" >Tip of The Day</h1>
+        
+        <p style="text-align: center" id = "texthere"></p>
+        <script type="text/javascript" src="9b_tips.js">
         </script>
     </body>
 </html>
