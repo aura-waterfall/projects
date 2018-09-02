@@ -2,17 +2,25 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
     <head>
-        <title>Assignment 9b Useful Tips</title>
+        <title>Asseignment 9e Class Array</title>
     </head>
     <body style="background-color: azure">
-        <div>
-            <img id = "mypic" style='position:relative;display: block;margin-left: auto;margin-right: auto;margin-top: 5%' src = 'Autumn.jpg' height='400px' width='600px' />
-        </div>
-        <p style="text-align: center" style='position:relative;color: darkgreen;margin-top: 5%'>~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~</p>
-        <h1 id="header" >Tip of The Day</h1>
-        
-        <p style="text-align: center" id = "texthere"></p>
-        <script type="text/javascript" src="9b_tips.js">
+        <p id="texthere"></p>
+        <script type="text/javascript">
+            var classes_list = new Array(5);
+            classes_list[0] = ['Science','Sophia','Jackson','Olivia','Liam','Emma'];
+            classes_list[1] = ['Math','Noah','Ava','Aiden','Isabella','Lucas'];
+            classes_list[2] = ['Reading','Mia','Caden','Aria','Grayson','Riley'];
+            classes_list[3] = ['Gym','Mason','Zoe','Elijah','Amelia','Logan'];
+            classes_list[4] = ['Writing','Layla','Oliver','Charlotte','Ethan','Aubrey'];
+            
+            for (var i=0; i<classes_list.length; i++) {
+                document.write(classes_list[i][0] + ": <br />");
+                for (var x=1; x<classes_list[i].length; x++){
+                    document.write(classes_list[i][x]+"<br />")
+                }
+                document.write("<br />")
+            }
         </script>
     </body>
 </html>
