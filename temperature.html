@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <title>Assignment 9d Temperature Conversion</title>
+    </head>
+        <style>
+            body, html {
+                height: 100%;
+                margin: 0;
+            }
+            .bg {
+                background-image: url("background.jpg");
+                height: 100%; 
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        </style>
+    <body style="font-size: 24px;color:#626262;">
+        <div class="bg" >
+        <h1 style = "font-size:42px;padding-top: 7%; padding-left: 20%; font-family: sans-serif;font-weight: 100;">Celsius/Fahrenheit Conversion</h1>
+        <div style="margin-left: 20%;">
+        Celsius: <input type="text" id='celsius' style="font-size: 18px;color:#626262;font-family: serif;margin-left: 32px;"/>
+        <br />
+        <br />
+        Fahrenheit: <input type="text" id='fahrenheit' style="font-size: 18px;color:#626262;font-family: serif"/>
+        <br />
+        <br />
+        <button id="convert" onclick="converttemp();" style="background-color: white;color:#626262;font-size:18px;font-family: serif">Convert</button>
+        </div>
+        </div>
+        <script type="text/javascript" src="9d_tempconversion.js">
+        </script>
+    </body>
+</html>
