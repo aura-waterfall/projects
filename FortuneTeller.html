@@ -1,0 +1,38 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>Fortune Teller</title>
+	</head>
+	<body style = "background-color: #baecff;">
+		<h1 id = "header">Fortune Teller</h1>
+		<button id = "theButton" onclick = "revealFortune()" >Click to reveal your fortune!</button>
+		<p id = "texthere"></p>
+		<script type = "text/javascript">
+			//Store the following into variables: number of children, partner's name, geographic location, job 			title.
+			//Output your fortune to the screen like so: "You will be a X in Y, and married to someone named Z 			with N kids."
+			var header = document.getElementById("header");
+			header.style = "color:darkcyan;font-family:Helvetica;font-size:45px;font-weight:lighter;";
+			var button = document.getElementById("theButton");
+			button.style = "background-color:darkgray;color:#baecff;font-size:25px;font-weight:lighter;font-			family:Helvetica;";
+			var careers = ["singer", "teacher", "writer", "nurse", "doctor", "lawyer", "scientist", 					"programmer", "police officer", "judge"];
+			var trueLove = ["Dakota", "Jordan", "Hayden", "Avery", "Morgan", "Cleo", "London", "Sam", 				"Taylor","Bailey"];
+			var geoLocation = ["New York", "Texas", "Chicago", "India", "Switzerland", "Rome", "China", 				"Germany", "Brazil", "England"];
+			var numChildren = ["no", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", 			"ten"];
+			var text = document.getElementById("texthere");
+			var cnum = Math.floor(Math.random() * 10);
+			var tnum = Math.floor(Math.random() * 10);
+			var gnum = Math.floor(Math.random() * 10);
+			var nnum = Math.floor(Math.random() * 10);
+			text.style = "color:darkcyan;font-family:Helvetica;font-size:20px;font-weight:lighter;";
+			function revealFortune() {
+			if (nnum == 1) {
+			text.innerHTML = "You will be a " + careers[cnum] + " in " + geoLocation[gnum] + ", and married to 			someone named " + trueLove[tnum] + " with " + numChildren[nnum] + " kid. <br /><br />Good luck with 			your life.";
+			} else {
+			text.innerHTML = "You will be a " + careers[cnum] + " in " + geoLocation[gnum] + ", and married to 			someone named " + trueLove[tnum] + " with " + numChildren[nnum] + " kids. <br /><br />Good luck with 			your life.";
+			}
+			}
+		</script>
+	</body>
+</html>
