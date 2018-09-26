@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <title>Javascript Functions</title>
+    </head>
+    <body style = "background-color:palegreen;">
+        <h1 style = "color:darkgreen;font-family: Helvetica;font-weight:lighter;font-size: 45;">Javascript Functions</h1>
+        <form style = "color:darkgreen;font-family: Helvetica;font-weight:lighter;font-size: 20;">
+            Input: <input type = "text" id = "typed"/>
+            <br />
+            <br />
+            <button style = "border:none;font-size: 18px;color:palegreen;background-color: darkgreen;font-family: Helvetica;font-weight: lighter;" onclick = "reversetext();return false;">Reverse Input</button>
+            <br />
+            <br />
+            <button style = "border:none;font-size: 18px;color:palegreen;background-color: darkgreen;font-family: Helvetica;font-weight: lighter;" onclick = "alphatext();return false;">Alphabetize</button>
+            <br />
+            <br />
+            <button style = "border:none;font-size: 18px;color:palegreen;background-color: darkgreen;font-family: Helvetica;font-weight: lighter;" onclick = "palindrome();return false;">Detect a palindrome</button>
+            <p id="typehere"></p>
+        </form>
+        <script type = "text/javascript">
+            /*1. Write a JavaScript function that reverse a number.
+            Example x = 32243;
+            Expected Output : 34223
+            2. Write a JavaScript function that checks whether a passed string is palindrome or not?
+            A palindrome is word, phrase, or sequence that reads the same backward as forward, e.g., madam or racecar.
+            4. Write a JavaScript function that returns a passed string with letters in alphabetical order. Go to the editor
+            Example string : 'webmaster' 
+            Expected Output : 'abeemrstw'
+            Assume punctuation and numbers symbols are not included in the passed string.*/
+            var helpme = document.getElementById("typed");
+            var res = document.getElementById("typehere");
+            function reversetext() {
+                res.innerHTML = "";
+                var thetext = helpme.value;
+                var arr = thetext.split("");
+                var rev = arr.reverse();
+                for (var i = 0; i < rev.length; i++) {
+                    res.innerHTML += rev[i];
+                }
+                return false;
+            }
+            function alphatext() {
+                res.innerHTML = "";
+                var thetext = helpme.value;
+                var arr = thetext.split("");
+                var rev = arr.sort();
+                for (var i = 0; i < rev.length; i++) {
+                    res.innerHTML += rev[i];
+                }
+                return false;
+            }
+            function palindrome() {
+                res.innerHTML = "";
+                var thetext = helpme.value;
+                var arr = thetext.split("");
+                //window.alert(arr);
+                var rev = arr.reverse();
+                //window.alert(rev);
+                var points = 0;
+                for (var x = 0; x < arr.length; x++){
+                    var arr2 = thetext.split("");
+                    if (rev[x] == arr2[x]) {
+                        points += 1;
+                        //window.alert(points);
+                    } else {
+                        points += 0;
+                        //window.alert(points);
+                    }
+                }
+                if (points == arr.length) {
+                    res.innerHTML = "The input is a  palindrome! It is the same word or words when flipped backwards.";
+                } else {
+                    res.innerHTML = "The input is not a palindrome! It forms a different word when flipped backwards.";
+                }
+            }
+        </script>
+    </body>
+</html>
+
